@@ -17,15 +17,62 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
   <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #f4f4f4;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.55;
+  }
+
+  main {
+    width: min(900px, calc(100% - 28px));
+    margin: 28px auto;
+    padding: 24px 20px 56px;
+    background: #fff;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 14px;
+  }
+
+  h1 {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 1.45rem;
+  }
+
+  .question {
+    margin-bottom: 22px;
+  }
+
+  .equation {
+    margin: 14px 0;
+    overflow-x: auto;
+  }
+
+  .conclusion {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.15em;
+  }
+
+  .back-home {
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 600px) {
     body {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 24px 20px 56px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 19px;
-      line-height: 1.55;
-      color: #111;
-      background: #f4f4f4;
+      font-size: 17px;
     }
 
     main {
@@ -35,45 +82,11 @@
       box-shadow: none;
     }
 
-    .hero {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0 auto 14px;
-    }
-
     h1 {
-      margin: 0 0 24px;
-      text-align: center;
-      font-size: 1.45rem;
+      font-size: 1.25rem;
     }
-
-    .question {
-      margin-bottom: 22px;
-    }
-
-    .equation {
-      margin: 14px 0;
-      overflow-x: auto;
-    }
-
-    .conclusion {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 1.15em;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 14px 14px 40px;
-        font-size: 17px;
-      }
-
-      h1 {
-        font-size: 1.25rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
