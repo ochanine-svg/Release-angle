@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <link rel="preload" as="image" href="theta.png" fetchpriority="high">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Release Angle at Ground Level</title>
@@ -93,10 +93,13 @@
 
   <main>
   <img
-    class="hero"
-    src="theta.png"
-    alt="Two projectile paths launched from ground level at different angles, with theta marked at the launch point."
-  >
+  class="hero"
+  src="theta.png"
+  alt="Two projectile paths launched from ground level at different angles, with theta marked at the launch point."
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+>
 
   <h1>Release Angle at Ground Level</h1>
 
