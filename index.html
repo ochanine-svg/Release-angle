@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="preload" as="image" href="theta.png" fetchpriority="high">
+<head>
+  <link rel="preload" as="image" href="theta.png" fetchpriority="high">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Release Angle at Ground Level</title>
 
   <script>
@@ -11,164 +14,179 @@
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
-      svg: { fontCache: 'global' }
+      svg: {
+        fontCache: 'global'
+      }
     };
   </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
 
   <style>
-  * {
-    box-sizing: border-box;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  body {
-    margin: 0;
-    background: #f4f4f4;
-    color: #111;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 19px;
-    line-height: 1.55;
-  }
-
-  main {
-    width: min(900px, calc(100% - 28px));
-    margin: 28px auto;
-    padding: 24px 20px 56px;
-    background: #fff;
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
-  }
-
-  .hero {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto 14px;
-  }
-
-  h1 {
-    margin: 0 0 24px;
-    text-align: center;
-    font-size: 1.45rem;
-  }
-
-  .question {
-    margin-bottom: 22px;
-  }
-
-  .equation {
-    margin: 14px 0;
-    overflow-x: auto;
-  }
-
-  .conclusion {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 1.15em;
-  }
-
-  .back-home {
-    margin-top: 2.5rem;
-  }
-
-  @media (max-width: 600px) {
     body {
-      font-size: 17px;
+      margin: 0;
+      background: #f4f4f4;
+      color: #111;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      line-height: 1.55;
     }
 
     main {
+      width: min(900px, calc(100% - 28px));
+      margin: 28px auto;
+      padding: 24px 20px 56px;
+      background: #fff;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero {
+      display: block;
       width: 100%;
-      margin: 0;
-      padding: 14px 14px 40px;
-      box-shadow: none;
+      height: auto;
+      margin: 0 auto 14px;
     }
 
     h1 {
-      font-size: 1.25rem;
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 1.45rem;
     }
-  }
-</style>
+
+    .question {
+      margin-bottom: 22px;
+    }
+
+    .equation {
+      margin: 14px 0;
+      overflow-x: auto;
+    }
+
+    .conclusion {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 1.15em;
+    }
+
+    .back-home {
+      margin-top: 2.5rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 14px 14px 40px;
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
   <main>
-  <img
-  class="hero"
-  src="theta.png"
-  alt="Two projectile paths launched from ground level at different angles, with theta marked at the launch point."
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
->
 
-  <h1>Release Angle at Ground Level</h1>
+    <img
+      class="hero"
+      src="theta.png"
+      alt="Two projectile paths launched from ground level at different angles, with theta marked at the launch point."
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
 
-  <p class="question">
-    <strong>Q:</strong> A projectile is released from ground level and lands at ground level.
-    At what angle $\theta$ above the horizontal should the projectile be released to maximize range?
-  </p>
+    <h1>Release Angle at Ground Level</h1>
 
-  <p>
-    Let $s$ denote the initial speed of the projectile at the moment of release.
-    From physics, the kinematic equations are
-  </p>
+    <p class="question">
+      <strong>Q:</strong> A projectile is released at ground level and lands at
+      ground level. At what angle $\theta$ above the horizontal should the
+      projectile be released to maximize range? The well-known answer of
+      $45^\circ$ comes down to symmetry.
+    </p>
 
-  <div class="equation">
-    \[
-      x(t)=ut
-    \]
-  </div>
+    <p>
+      Let $s$ denote the initial speed of the projectile at the moment of
+      release. From physics, the kinematic equations are
+    </p>
 
-  <div class="equation">
-    \[
-      y(t)=-0.5gt^2+vt=-16t^2+vt,
-    \]
-  </div>
+    <div class="equation">
+      \[
+        x(t)=ut
+      \]
+    </div>
 
-  <p>
-    where $g=32\text{ ft/s}^2$ is the magnitude of acceleration due to gravity,
-    and $u=s\cos\theta$ and $v=s\sin\theta$ are the horizontal and vertical
-    components of initial velocity.
-  </p>
+    <div class="equation">
+      \[
+        y(t)=-0.5gt^2+vt=-16t^2+vt,
+      \]
+    </div>
 
-  <p>
-    Setting $y(t)=0$ and dividing by $t$, we can solve for the nonzero solution:
-  </p>
+    <p>
+      where $g=32\text{ ft/s}^2$ is the magnitude of acceleration due to
+      gravity, and $u=s\cos\theta$ and $v=s\sin\theta$ are the initial
+      horizontal and vertical components of velocity.
+    </p>
 
-  <div class="equation">
-    \[
-      t_{\text{air}}=\frac{v}{16}.
-    \]
-  </div>
+    <p>
+      Setting $y(t)=0$ and dividing by $t$, we can solve for the nonzero
+      solution:
+    </p>
 
-  <p>Time in air is directly proportional to $v$.</p>
+    <div class="equation">
+      \[
+        t_{\text{air}}=\frac{v}{16}.
+      \]
+    </div>
 
-  <p>
-    The range is the product of the horizontal speed and the time in air.
-    Let $r$ denote range.
-  </p>
+    <p>
+      Time in air is directly proportional to $v$.
+    </p>
 
-  <div class="equation">
-    \[
-      r=u(t_{\text{air}})=\frac{uv}{16}.
-    \]
-  </div>
+    <p>
+      The range is the product of the horizontal speed and the time in air.
+      Let $r$ denote range.
+    </p>
 
-  <p>
-    In the language of Section 4.5, $r$ is the objective function and the constraint is $u^2+v^2=s^2$.
-    Since the objective function and constraint equation are both symmetric in $u$ and $v$, the roles of $u$ and $v$ are interchangeable for the optimization and the maximum value of $r$ occurs when $u=v$. 
-  </p>
+    <div class="equation">
+      \[
+        r=u(t_{\text{air}})=\frac{uv}{16}.
+      \]
+    </div>
 
-  <p class="conclusion">
-    Therefore, the optimal release angle is $45^\circ$.
-  </p>
+    <p>
+      In the language of Section 4.5, $r$ is the objective function and the
+      constraint is $u^2+v^2=s^2$. Since the objective function and constraint
+      equation are both symmetric in $u$ and $v$, the roles of $u$ and $v$ are
+      interchangeable for the optimization. The maximum value of $r$ therefore
+      occurs when $u=v$, or equivalently, when
+      $\cos\theta=\sin\theta$.
+    </p>
 
-  <p class="back-home">
-  <a href="https://sites.google.com/view/ustudentresourcesl/calculus-i">
-    ← Back to Calculus I
-  </a>
-</p>
+    <p class="conclusion">
+      Therefore, the optimal launch angle is $45^\circ$.
+    </p>
 
-    </main>
+    <p class="back-home">
+      <a href="https://sites.google.com/view/ustudentresourcesl/calculus-i">
+        ← Back to Calculus I
+      </a>
+    </p>
+
+  </main>
 </body>
 </html>
